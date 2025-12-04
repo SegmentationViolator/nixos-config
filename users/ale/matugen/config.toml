@@ -1,0 +1,7 @@
+[config.wallpaper]
+command = ""
+set = false
+
+[templates.niri]
+input_path = "./templates/niri.kdl"
+output_path = "../generated/niri.kdl"
