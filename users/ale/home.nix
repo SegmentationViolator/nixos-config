@@ -7,8 +7,8 @@ let
     '';
 
     wallpaper = pkgs.fetchurl {
-        url = "https://w.wallhaven.cc/full/zp/wallhaven-zpp1pj.jpg";
-        hash = "sha256-w4BrRFKudNxsT0qZyIl4Yvqoc/3mRu2wsXnNTnLxOlw=";
+        url = "https://w.wallhaven.cc/full/1q/wallhaven-1q83qg.jpg";
+        hash = "sha256-QPmG4QTRvubuX6Fy5rmMwYKw4aQdBiH/zGL/PMmUZOk=";
     };
 in
 {

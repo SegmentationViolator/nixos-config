@@ -47,7 +47,6 @@
                 format-nonzero = "{icon}";
                 states = { nonzero = 1; };
                 tooltip-format = "{volume}%";
-                tooltip-format-muted = "Muted";
             };
 
             "wlr/taskbar" = {

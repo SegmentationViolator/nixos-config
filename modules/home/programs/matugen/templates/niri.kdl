@@ -9,8 +9,6 @@ prefer-no-csd
 
 input {
     keyboard {
-        xkb { }
-
         repeat-delay 150
         repeat-rate 40
     }
@@ -19,13 +17,6 @@ input {
         tap
         natural-scroll
     }
-
-    mouse { }
-
-    trackpoint { }
-
-    // Focus windows and outputs automatically when moving the mouse into them.
-    focus-follows-mouse max-scroll-amount="10%"
 
     disable-power-key-handling
 }
@@ -71,14 +62,10 @@ layout {
 
         active-gradient from="{{ colors.primary.default.hex }}" to="{{ colors.secondary.default.hex }}" angle=45
     }
-
-    shadow { }
-
-    struts { }
 }
 
 window-rule {
-    match app-id="floorp" title="^Picture-in-Picture$"
+    match app-id="helium" title="^Picture-in-Picture$"
     open-floating true
 }
 
@@ -98,43 +85,50 @@ cursor {
 }
 
 binds {
+    XF86AudioRaiseVolume { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+" "-l" "1.0"; }
+    XF86AudioLowerVolume { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-" "-l" "1.0"; }
+    XF86AudioMute        { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
+    XF86AudioMicMute     { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
+
     Mod+Shift+Slash { show-hotkey-overlay; }
 
-    Mod+Space { spawn "ghostty" "+new-window"; }
-    Mod+R { spawn "fuzzel"; }
+    Mod+Space       { spawn "ghostty" "+new-window"; }
+    Mod+Alt+Space { spawn "fuzzel"; }
+
+    Mod+H { focus-column-left; }
+    Mod+J { focus-window-down; }
+    Mod+K { focus-window-up; }
+    Mod+L { focus-column-right; }
+
+    Mod+Ctrl+H { move-column-left; }
+    Mod+Ctrl+J { move-window-down; }
+    Mod+Ctrl+K { move-window-up; }
+    Mod+Ctrl+L { move-column-right; }
+
+    Mod+Shift+J { focus-workspace-down; }
+    Mod+Shift+K { focus-workspace-up; }
+
+    Mod+Ctrl+Shift+J { move-window-to-workspace-down; }
+    Mod+Ctrl+Shift+K { move-window-to-workspace-up; }
+
+    Mod+WheelScrollDown cooldown-ms=150 { focus-workspace-down; }
+    Mod+WheelScrollUp   cooldown-ms=150 { focus-workspace-up; }
+
+    Mod+Tab       { switch-preset-column-width; }
+    Mod+Shift+Tab { switch-preset-window-height; }
 
     Mod+Shift+C { close-window; }
-
-    Mod+H     { focus-column-left; }
-    Mod+J     { focus-window-down; }
-    Mod+K     { focus-window-up; }
-    Mod+L     { focus-column-right; }
-    Mod+Ctrl+H     { move-column-left; }
-    Mod+Ctrl+J     { move-window-down; }
-    Mod+Ctrl+K     { move-window-up; }
-    Mod+Ctrl+L     { move-column-right; }
-
-    Mod+Shift+J     { focus-workspace-down; }
-    Mod+Shift+K     { focus-workspace-up; }
-    Mod+Ctrl+Shift+J     { move-window-to-workspace-down; }
-    Mod+Ctrl+Shift+K     { move-window-to-workspace-up; }
-
-    Mod+WheelScrollDown      cooldown-ms=150 { focus-workspace-down; }
-    Mod+WheelScrollUp        cooldown-ms=150 { focus-workspace-up; }
-
-    Mod+Tab { switch-preset-column-width; }
-    Mod+Shift+Tab { switch-preset-window-height; }
-    Mod+F { maximize-column; }
+    Mod+F       { maximize-column; }
     Mod+Shift+F { fullscreen-window; }
 
     Mod+V       { toggle-window-floating; }
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
 
     Mod+Shift+S { screenshot; }
-    Print { screenshot-screen; }
-    Ctrl+Print { screenshot-window; }
+    Print       { screenshot-screen; }
+    Ctrl+Print  { screenshot-window; }
 
-    Mod+O { toggle-overview; }
+    Mod+O       { toggle-overview; }
 
     Mod+Shift+Q { quit skip-confirmation=true; }
 

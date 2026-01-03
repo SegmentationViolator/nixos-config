@@ -7,5 +7,4 @@
         { keys = [ 224 ]; events = [ "key" ]; command = "${lib.getExe' pkgs.brightnessctl "brightnessctl"} set 10%-"; }
         { keys = [ 225 ]; events = [ "key" ]; command = "${lib.getExe' pkgs.brightnessctl "brightnessctl"} set 10%+"; }
     ];
-
 }
