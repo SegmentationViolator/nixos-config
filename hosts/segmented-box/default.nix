@@ -37,6 +37,7 @@
         hostName = "segmented-box";
     };
 
+    programs.gnupg.agent.enable = true;
 
     services.actkbd.enable = true;
 

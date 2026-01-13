@@ -120,13 +120,11 @@ in
         settings = {
             init.defaultBranch = "main";
             user = {
-                name = "SegmentationViolator";
+                name = "Segmentation Violator";
                 email = "segmentationviolator@proton.me";
             };
         };
     };
-
-    programs.gpg.enable = true;
 
     programs.hyfetch = {
         enable = true;
@@ -167,8 +165,6 @@ in
     programs.nix-index.enable = true;
 
     programs.waybar.style = builtins.readFile (config.programs.matugen.theme.files + "/waybar.css");
-
-    services.gpg-agent.enable = true;
 
     services.mako.settings = {
         background-color = "#${config.programs.matugen.theme.colors.on_primary.default}";
