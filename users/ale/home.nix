@@ -16,6 +16,8 @@ in
         matugen.nixosModules.default
         nix-index-database.homeModules.default
         ../../modules/home/programs/direnv.nix
+        ../../modules/home/programs/gh.nix
+        ../../modules/home/programs/ghostty.nix
         ../../modules/home/programs/matugen
         ../../modules/home/programs/vesktop.nix
         ../../modules/home/programs/waybar.nix
@@ -32,7 +34,9 @@ in
 
         iconTheme = {
             name = "Papirus";
-            package = pkgs.papirus-icon-theme;
+            package = pkgs.papirus-icon-theme.override {
+                color = "violet";
+            };
         };
 
         theme = {
@@ -108,28 +112,7 @@ in
         };
     };
 
-    programs.gh = {
-        enable = true;
-
-        settings = {
-            prompt = "enabled";
-            color_labels = "enabled";
-            spinner = "enabled";
-        };
-    };
-
-    programs.ghostty = {
-        enable = true;
-
-        settings = {
-            background-opacity = 0.8;
-            font-family = "Monaspace Neon";
-            font-feature = "+calt, +ss01, +ss02, +ss03, +ss04, +ss05, +ss06, +ss07, +ss08, +ss09, +liga";
-            quit-after-last-window-closed = true;
-            quit-after-last-window-closed-delay = "5m";
-            theme = "TokyoNight";
-        };
-    };
+    programs.ghostty.font-family = "Monaspace Neon";
 
     programs.git = {
         enable = true;
@@ -153,7 +136,7 @@ in
             lightness = 0.65;
             backend = "fastfetch";
             color_align = { mode = "horizontal"; };
-            pride_month_disable = true;
+            pride_month_disable = false;
         };
     };
 

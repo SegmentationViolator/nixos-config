@@ -19,16 +19,28 @@
         bat
         eza
         git
-        nvf-config.packages.${pkgs.stdenv.hostPlatform.system}.default
         unzip
     ];
 
     i18n.defaultLocale = "en_US.UTF-8";
 
-    # for Fragments (BitTorrent client)
-    networking.firewall.allowedTCPPorts = [ 51413 ];
+    networking = {
+        firewall = {
+            allowedTCPPorts = [
+                # developmennt web server
+                8000 8080
+                # for BitTorrent client
+                51413
+            ];
+        };
+        hostName = "segmented-box";
+    };
 
-    networking.hostName = "segmented-box";
+    programs.neovim = {
+        enable = true;
+        defaultEditor = true;
+        package = nvf-config.packages.${pkgs.stdenv.hostPlatform.system}.default;
+    };
 
     services.actkbd.enable = true;
 
