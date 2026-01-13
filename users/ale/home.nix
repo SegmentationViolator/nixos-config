@@ -112,7 +112,7 @@ in
         };
     };
 
-    programs.ghostty.font-family = "Monaspace Neon";
+    programs.ghostty.settings.font-family = "Monaspace Neon";
 
     programs.git = {
         enable = true;

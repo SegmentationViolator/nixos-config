@@ -19,6 +19,7 @@
         bat
         eza
         git
+        nvf-config.packages.${pkgs.stdenv.hostPlatform.system}.default
         unzip
     ];
 
@@ -36,11 +37,6 @@
         hostName = "segmented-box";
     };
 
-    programs.neovim = {
-        enable = true;
-        defaultEditor = true;
-        package = nvf-config.packages.${pkgs.stdenv.hostPlatform.system}.default;
-    };
 
     services.actkbd.enable = true;
 
