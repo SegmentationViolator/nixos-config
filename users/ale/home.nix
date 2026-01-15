@@ -48,19 +48,17 @@ in
     home.pointerCursor =
         let
             getFrom = url: hash: name: {
+                inherit name;
+
                 enable = true;
                 dotIcons.enable = false;
                 gtk.enable = true;
 
-                name = name;
                 size = 24;
                 package =
                 pkgs.runCommand name {} ''
                     mkdir -p $out/share/icons
-                    ln -s ${pkgs.fetchzip {
-                        url = url;
-                        hash = hash;
-                    }} $out/share/icons/${name}
+                    ln -s ${pkgs.fetchzip { inherit url hash; }} $out/share/icons/${name}
                 '';
             };
         in
@@ -79,6 +77,7 @@ in
         nur.repos.forkprince.helium-nightly
         stremio-service
         swaybg
+        xdg-utils
 
         font-awesome
         monaspace
