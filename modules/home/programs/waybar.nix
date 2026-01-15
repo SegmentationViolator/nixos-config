@@ -20,6 +20,7 @@
                 format-charging = "&#xe55b;";
                 format-plugged = "&#xf1e6;";
                 format-icons = [ "&#xf243;" "&#xf242;" "&#xf241;" "&#xf240;" ];
+                tooltip-format = "{capacity}%";
             };
 
             clock = {
