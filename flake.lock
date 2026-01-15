@@ -243,11 +243,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1768482820,
-        "narHash": "sha256-24I/zXbZ/kCjJbYbdTqIebHSYqrfKwzst/mDRlTyocM=",
+        "lastModified": 1768486847,
+        "narHash": "sha256-KWVAgGeadJog3MWTJL7gI2HScLtAZe85502JXpv8stE=",
         "owner": "SegmentationViolator",
         "repo": "nvf-config",
-        "rev": "34f1e4a6031d55e7d1591d9beace20ebef9a6d71",
+        "rev": "5f5ae27ea3fdcc9df1bcb87ccd091e7f184aa47c",
         "type": "github"
       },
       "original": {
