@@ -3,10 +3,9 @@
 {
     services.navidrome = {
         enable = true;
-        openFirewall = true;
+        openFirewall = false;
 
         settings = {
-            Address = "0.0.0.0";
             MusicFolder = "/mnt/media/Music";
         };
     };

@@ -1,9 +1,7 @@
 { pkgs, ... }: {
     imports = [
-        ../../modules/nixos/overlays/stremio-service.nix
-        ../../modules/nixos/programs/niri.nix
-        ../../modules/nixos/programs/zsh.nix
-        ../../modules/nixos/services/navidrome.nix
+        ../../modules/programs/niri.nix
+        ../../modules/programs/zsh.nix
     ];
 
     users.users.ale = {

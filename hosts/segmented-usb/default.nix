@@ -2,12 +2,12 @@
 
 {
     imports = [
-        ../../modules/nixos/bootloader/systemd-boot.nix
-        ../../modules/nixos/hardware/backlight.nix
-        ../../modules/nixos/hardware/networking.nix
-        ../../modules/nixos/hardware/sound.nix
-        ../../modules/nixos/security/doas.nix
-        ../../modules/nixos/services/power-management.nix
+        ../../modules/bootloader/systemd-boot.nix
+        ../../modules/hardware/backlight.nix
+        ../../modules/hardware/networking.nix
+        ../../modules/hardware/sound.nix
+        ../../modules/security/doas.nix
+        ../../modules/services/power-management.nix
         ./hardware-configuration.nix
     ];
 
@@ -23,9 +23,6 @@
     ];
 
     i18n.defaultLocale = "en_US.UTF-8";
-
-    # for Fragments (BitTorrent client)
-    networking.firewall.allowedTCPPorts = [ 51413 ];
 
     networking.hostName = "segmented-usb";
 
