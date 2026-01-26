@@ -130,11 +130,11 @@
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1769461793,
-        "narHash": "sha256-28ado/ufW5n99fiCuV1UqBC4xYdWCwwWt+/RR3EhmOQ=",
+        "lastModified": 1769464827,
+        "narHash": "sha256-aZK0QA81tcStgKKRHc04TUbVwCwnKXA0qTFxGxmRAvo=",
         "owner": "SegmentationViolator",
         "repo": "nvf-config",
-        "rev": "14b2404cc52826784c99efb8e85c63cee42f37cd",
+        "rev": "901d044f4a868ef689011abd57c7b6f141215fa8",
         "type": "github"
       },
       "original": {

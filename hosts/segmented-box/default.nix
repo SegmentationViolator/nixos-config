@@ -1,4 +1,4 @@
-{ lib, pkgs, nvf-config, ... }:
+{ pkgs, ... }:
 
 {
     imports = [
@@ -20,10 +20,10 @@
     boot.kernelPackages = pkgs.linuxPackages_latest;
 
     environment.systemPackages = with pkgs; [
+        bottom
         bat
         eza
         git
-        nvf-config.packages.${pkgs.stdenv.hostPlatform.system}.default
         unzip
     ];
 

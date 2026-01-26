@@ -14,7 +14,6 @@
         nixosConfigurations = {
             segmented-box = nixpkgs.lib.nixosSystem {
                 modules = [ ./hosts/segmented-box ];
-                specialArgs = { inherit nvf-config; };
             };
 
             segmented-usb = nixpkgs.lib.nixosSystem {
