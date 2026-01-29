@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ lib, pkgs, ... }:
 
 {
     imports = [
@@ -23,6 +23,7 @@
         bottom
         bat
         eza
+        fastfetch
         git
         unzip
     ];

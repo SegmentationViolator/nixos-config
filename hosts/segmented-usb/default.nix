@@ -17,6 +17,7 @@
         bottom
         bat
         eza
+        fastfetch
         git
         nvf-config.packages.${pkgs.stdenv.hostPlatform.system}.default
         unzip
