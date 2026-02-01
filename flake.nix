@@ -19,6 +19,7 @@
             segmented-usb = nixpkgs.lib.nixosSystem {
                 modules = [ ./hosts/segmented-usb ];
                 specialArgs = { inherit nvf-config; };
+                system = "x86_64-linux";
             };
         };
     };
