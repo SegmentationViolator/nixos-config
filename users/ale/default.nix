@@ -1,5 +1,6 @@
 { pkgs, ... }: {
     imports = [
+        ../../modules/programs/fragments.nix
         ../../modules/programs/niri.nix
         ../../modules/programs/zsh.nix
     ];

@@ -1,7 +1,11 @@
 { ... }:
 
 {
-    networking.dhcpcd.enable = false;
+
+    networking = {
+        dhcpcd.enable = false;
+        nftables.enable = true;
+    };
 
     networking.nameservers = [
         "1.1.1.1"
