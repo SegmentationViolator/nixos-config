@@ -19,12 +19,15 @@
 
     boot.kernelPackages = pkgs.linuxPackages_latest;
 
+    boot.binfmt.emulatedSystems = [
+        "aarch64-linux"
+    ];
+
     environment.systemPackages = with pkgs; [
         bottom
         bat
         eza
         fastfetch
-        git
         unzip
     ];
 
@@ -32,6 +35,7 @@
 
     networking.hostName = "segmented-box";
 
+    programs.git.enable = true;
     programs.gnupg.agent.enable = true;
 
     services.actkbd.enable = true;
@@ -39,6 +43,8 @@
     time.timeZone = "Asia/Kolkata";
 
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+    nix.settings.extra-platforms = [ "aarch64-linux" ];
 
     system.stateVersion = "26.05";
 }
