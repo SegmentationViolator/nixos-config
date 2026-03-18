@@ -4,6 +4,7 @@
     imports = [
         ../../modules/bootloader/systemd-boot.nix
         ../../modules/hardware/backlight.nix
+        ../../modules/hardware/bluetooth.nix
         ../../modules/hardware/networking.nix
         ../../modules/hardware/nvidia.nix
         ../../modules/hardware/sound.nix
