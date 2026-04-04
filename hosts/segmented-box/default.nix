@@ -24,6 +24,8 @@
         "aarch64-linux"
     ];
 
+    documentation.nixos.enable = false;
+
     environment.systemPackages = with pkgs; [
         bottom
         bat
@@ -34,7 +36,9 @@
 
     i18n.defaultLocale = "en_US.UTF-8";
 
-    networking.hostName = "segmented-box";
+    networking = {
+        hostName = "segmented-box";
+    };
 
     programs.git.enable = true;
     programs.gnupg.agent.enable = true;
