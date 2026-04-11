@@ -9,5 +9,5 @@
     ];
 
 
-    environment.systemPackages = [ pkgs.fragments ];
+    environment.systemPackages = [ pkgs.motrix-next ];
 }
