@@ -26,7 +26,7 @@
     ];
 
     specialisation.no-nvidia.configuration = {
-        hardware.graphics.enable = false;
+        hardware.graphics.enable = lib.mkForce false;
         services.xserver.videoDrivers = lib.mkForce [ "modesetting" ];
     };
 }
